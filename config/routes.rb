@@ -1,4 +1,8 @@
 Code::Application.routes.draw do
+  resources :pins
+
+  devise_for :users
+
 get 'about' => 'pages#about'
 get 'home' => 'pages#home'
 root :to => 'pages#home'

@@ -1,12 +1,16 @@
+<% if user_signed_in? %>
+	<h1>You are logged in !!</h1>
 
-<div class="hero-unit">
-	<h1>Welcome to One Month Rails Windows!!</h1>
-	<p>
-		You have found the homepage for
-		<%= link_to "One Month Rails", "http://paypal.com" %>
-	</p>
+<% else %>
+	<div class="hero-unit">
+		<h1>Welcome to One Month Rails Windows!!</h1>
+		<p>
+			You have found the homepage for
+			<%= link_to "One Month Rails", "http://paypal.com" %>
+		</p>
 
-	<p>
-		<%= link_to "Sign Up Now!","#", class: "btn btn-large btn-primary" %>
-	</p>
-</div>
+		<p>
+			<%= link_to "Sign Up Now!",new_user_registration_path, class: "btn btn-large btn-primary" %>
+		</p>
+	</div>
+<% end %>
